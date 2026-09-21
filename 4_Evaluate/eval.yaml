@@ -1,0 +1,15 @@
+name: manuscriptshield-quality-eval
+description: "Batch evaluation suite for ManuscriptShield AI testing citation accuracy, statistical consistency, and task adherence."
+
+dataset:
+  local_uri: test_manuscripts.jsonl
+
+evaluators:
+  - builtin.task_adherence
+  - builtin.coherence
+  - builtin.fluency
+  - builtin.violence
+
+options:
+  eval_model: gpt-4o
+  max_samples: 5

@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: manuscriptshield-ai
+
+requiredVersions:
+  azd: ">=1.27.1"
+  extensions:
+    azure.ai.agents: ">=1.0.0-beta.8"
+    azure.ai.projects: ">=1.0.0-beta.4"
+
+services:
+  # Core Foundry Project and Model Deployments
+  ai-project:
+    host: azure.ai.project
+    deployments:
+      - name: gpt-4o
+        model:
+          format: OpenAI
+          name: gpt-4o
+          version: "2024-11-20"
+        sku:
+          name: GlobalStandard
+          capacity: 30
+      - name: gpt-4o-mini
+        model:
+          format: OpenAI
+          name: gpt-4o-mini
+          version: "2024-07-18"
+        sku:
+          name: GlobalStandard
+          capacity: 50
+
+  # Centralized Toolbox for shared agent execution
+  manuscript-tools:
+    host: azure.ai.toolbox
+    uses:
+      - ai-project
+    description: "Tools for manuscript parsing, vector retrieval, and code execution"
+    tools:
+      - type: code_interpreter
+      - type: file_search

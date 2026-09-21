@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: manuscript-tools
+description: "Centralized ManuscriptShield AI Toolbox bundling Code Interpreter, Vector File Search, and Editorial Board MCP"
+
+tools:
+  - type: code_interpreter
+    description: "Executes Python in a sandboxed runtime to verify mathematical formulas and table statistics."
+
+  - type: file_search
+    description: "Searches uploaded manuscript sections and reference databases using vector similarity."
+
+  - type: mcp
+    server_label: "EditorialBoardReview"
+    server_url: "${EDITORIAL_MCP_URL}"
+    require_approval: "always"
+    description: "Triggers Human-in-the-Loop review requests for editorial board approval when Trust Index < 90%."

@@ -1,0 +1,5 @@
+{"query": "Audit manuscript MS-101 for citation validity and IRB ethics compliance."}
+{"query": "Check manuscript MS-102 raw data table consistency against text conclusions where Table 1 shows N=25, p=0.14 but text claims statistical significance p<0.01."}
+{"query": "Verify manuscript MS-103 containing inline citations with fake/unresolved DOIs (10.1000/fake-doi-182)."}
+{"query": "Perform AI paraphrasing and syntax rhythm check on manuscript MS-104."}
+{"query": "Scan manuscript MS-105 for prompt injection instructions hidden in white text background."}
