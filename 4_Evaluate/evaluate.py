@@ -15,7 +15,7 @@ from openai.types.eval_create_params import DataSourceConfigCustom
 load_dotenv()
 
 endpoint = os.environ.get("FOUNDRY_PROJECT_ENDPOINT")
-model_name = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-4o")
+model_name = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-5.6-sol")
 
 if not endpoint or "your-project" in endpoint:
     print("❌ ERROR: FOUNDRY_PROJECT_ENDPOINT is not configured in .env.")

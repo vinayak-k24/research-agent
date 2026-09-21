@@ -6,7 +6,7 @@ Welcome to **Challenge 1** of **ManuscriptShield AI**. This module constructs al
 
 ## 📂 Files Included
 
-* **`agents.py`**: Instantiates sub-agents using `PromptAgentDefinition` and binds them to `gpt-4o` and `gpt-4o-mini`.
+* **`agents.py`**: Instantiates sub-agents using `PromptAgentDefinition` and binds them to `gpt-5.6-sol`.
 * **`tools.py`**: Helper definitions for Code Interpreter, File Search, Editorial MCP tools, and custom `FunctionTool` implementations (`check_thresholds`).
 * **`toolbox.yaml`**: Declarative manifest for provisioning the shared `manuscript-tools` toolbox via Azure Developer CLI (`azd ai toolbox create`).
 

@@ -118,10 +118,18 @@ manuscriptshield-ai/
 │   ├── evaluate.py              # Evaluation script calling openai_client.evals.create()
 │   └── evaluation_results.json  # Cached output schema for evaluation results
 │
-└── 5_deploy/                    # Challenge 4: Workflow Orchestration & HITL Deployments
+├── 5_deploy/                    # Challenge 4: Workflow Orchestration & HITL Deployments
     ├── README.md                # Walkthrough: Stateful Responses API & HITL approvals
     ├── main.py                  # Primary orchestrator script & McpApprovalResponse loop
     └── deploy.sh                # Shell script to package & deploy via azd up
+
+└── 6_Test/                      # Demo manuscripts, mock MCP, and generated reports
+  ├── demo_commands.md         # Recording and repeat-run commands
+  ├── demo_manuscript.md       # Original sample manuscript
+  ├── demo_manuscript_correct.md
+  ├── demo_manuscript_problematic.md
+  ├── mock_editorial_mcp_server.py
+  └── reports/                 # Generated Markdown review reports
 ```
 
 ---
@@ -130,11 +138,12 @@ manuscriptshield-ai/
 
 | Challenge # | Stage | Est. Time | Focus & SDK Capabilities Covered |
 | :--- | :--- | :---: | :--- |
-| **`1_setup/`** | **Setup** | 20 min | Provision Microsoft Foundry, deploy models (`gpt-4o`/`gpt-4o-mini`), configure `azure.yaml` split-services, set up Entra ID RBAC. |
+| **`1_setup/`** | **Setup** | 20 min | Provision Microsoft Foundry, deploy model (`gpt-5.6-sol`), configure `azure.yaml` split-services, set up Entra ID RBAC. |
 | **`2_build/`** | **Build Agents** | 35 min | Define 8 specialized sub-agents with `PromptAgentDefinition`, bind **Code Interpreter** sandboxes, and configure **Foundry Toolboxes** (`azure.ai.toolbox`). |
 | **`3_monitor/`** | **Monitor** | 20 min | Instrument OpenTelemetry GenAI tracing (`microsoft-opentelemetry`) to export spans, tool calls, and latency waterfalls to **Application Insights**. |
 | **`4_evaluate/`** | **Evaluate** | 25 min | Run cloud batch evaluations using `openai_client.evals.create()` with built-in evaluators (`task_adherence`, `coherence`) against benchmark datasets (`.jsonl`). |
 | **`5_deploy/`** | **Workflow** | 20 min | Orchestrate multi-agent workflows over the stateful **Responses API** (`/openai/v1/`), handling **Human-in-the-Loop (HITL) MCP approvals** (`require_approval="always"`). |
+| **`6_Test/`** | **Demo** | 10 min | Run clean/problematic manuscripts, show agent comments and scores, and generate Markdown reports without rebuilding agents each time. |
 
 ---
 
@@ -171,8 +180,8 @@ chmod +x setup.sh
 Copy `.env.example` to `.env` and fill in your Microsoft Foundry project endpoint:
 ```dotenv
 FOUNDRY_PROJECT_ENDPOINT=https://<your-resource>.services.ai.azure.com/api/projects/<your-project>
-FOUNDRY_MODEL_NAME=gpt-4o
-FOUNDRY_MINI_MODEL=gpt-4o-mini
+FOUNDRY_MODEL_NAME=gpt-5.6-sol
+FOUNDRY_MINI_MODEL=gpt-5.6-sol
 EDITORIAL_MCP_URL=https://journal-editorial.internal/mcp
 APPLICATIONINSIGHTS_CONNECTION_STRING=InstrumentationKey=...
 ```
@@ -203,6 +212,23 @@ APPLICATIONINSIGHTS_CONNECTION_STRING=InstrumentationKey=...
   ```bash
   python 5_deploy/main.py
   ```
+
+### 4. Recordable Test Demo
+
+The test assets live in [6_Test](6_Test). Build the eight Foundry agents once:
+
+```powershell
+.\.venv\Scripts\python.exe .\2_Build\agents.py
+```
+
+After that, the workflow loads the latest existing agent versions and does not register or delete them on every run. Run either manuscript from the repository root:
+
+```powershell
+.\.venv\Scripts\python.exe .\5_Deploy\main.py --manuscript .\6_Test\demo_manuscript_problematic.md
+.\.venv\Scripts\python.exe .\5_Deploy\main.py --manuscript .\6_Test\demo_manuscript_correct.md
+```
+
+Each run shows anonymized content, detected problems, agent comments, individual scores, the Trust Index, and the editorial decision. The report is written to `6_Test/reports/`. The complete recording sequence, including the optional ngrok MCP server, is in [6_Test/demo_commands.md](6_Test/demo_commands.md).
 
 ---
 

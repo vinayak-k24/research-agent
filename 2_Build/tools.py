@@ -55,8 +55,10 @@ def get_editorial_mcp_tool(
     mcp_url: str = None,
     server_label: str = "EditorialBoardReview",
     require_approval: str = "always",
-) -> MCPTool:
-    mcp_url = mcp_url or os.environ.get("EDITORIAL_MCP_URL", "https://journal-editorial.internal/mcp")
+):
+    mcp_url = mcp_url or os.environ.get("EDITORIAL_MCP_URL")
+    if not mcp_url or "<your" in mcp_url or "journal-editorial.internal" in mcp_url:
+        return None
     return MCPTool(
         server_url=mcp_url,
         server_label=server_label,
