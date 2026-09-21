@@ -8,7 +8,7 @@ from azure.ai.projects import AIProjectClient
 load_dotenv()
 
 endpoint = os.environ.get("FOUNDRY_PROJECT_ENDPOINT")
-model_name = os.environ.get("FOUNDRY_MINI_MODEL", "gpt-4o-mini")
+model_name = os.environ.get("FOUNDRY_MINI_MODEL", "gpt-5.6-sol")
 
 if not endpoint or "your-project" in endpoint:
     print("❌ ERROR: FOUNDRY_PROJECT_ENDPOINT is missing or unconfigured in .env file.")

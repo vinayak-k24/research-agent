@@ -10,6 +10,7 @@ azure-core-tracing-opentelemetry>=1.0.0b11
 azure-ai-projects>=2.0.0
 azure-identity>=1.25.0
 microsoft-opentelemetry>=1.0.0
+mcp>=2.2.0
 openai>=1.75.0
 pydantic>=2.0.0
 python-dotenv>=1.0.0

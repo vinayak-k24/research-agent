@@ -12,19 +12,19 @@ services:
   ai-project:
     host: azure.ai.project
     deployments:
-      - name: gpt-4o
+      - name: gpt-5.6-sol
         model:
           format: OpenAI
-          name: gpt-4o
-          version: "2024-11-20"
+          name: gpt-5.6-sol
+          version: "2026-07-09"
         sku:
           name: GlobalStandard
           capacity: 30
-      - name: gpt-4o-mini
+      - name: gpt-5.6-sol-mini
         model:
           format: OpenAI
-          name: gpt-4o-mini
-          version: "2024-07-18"
+          name: gpt-5.6-sol
+          version: "2026-07-09"
         sku:
           name: GlobalStandard
           capacity: 50

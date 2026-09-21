@@ -50,7 +50,7 @@ def setup_tracing():
 def run_traced_agent_call():
     """Execute a sample traced agent invocation to generate Application Insights telemetry."""
     endpoint = os.getenv("FOUNDRY_PROJECT_ENDPOINT")
-    model_name = os.getenv("FOUNDRY_MINI_MODEL", "gpt-4o-mini")
+    model_name = os.getenv("FOUNDRY_MINI_MODEL", "gpt-5.6-sol")
 
     if not endpoint or "your-project" in endpoint:
         print("⚠️ FOUNDRY_PROJECT_ENDPOINT not configured. Skipping live traced request.")
