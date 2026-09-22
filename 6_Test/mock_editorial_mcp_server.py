@@ -9,12 +9,13 @@ from mcp.server.transport_security import TransportSecuritySettings
 HOST = "127.0.0.1"
 PORT = 8000
 
-load_dotenv()
+load_dotenv(override=True)
 configured_mcp_url = os.getenv("EDITORIAL_MCP_URL", "")
-configured_host = urlparse(configured_mcp_url).netloc
-allowed_hosts = [f"{HOST}:{PORT}", f"localhost:{PORT}"]
+configured_host = urlparse(configured_mcp_url).hostname
+allowed_hosts = [f"{HOST}:*", "localhost:*"]
 if configured_host:
     allowed_hosts.append(configured_host)
+    allowed_hosts.append(f"{configured_host}:*")
 
 mcp = MCPServer("EditorialBoardReview")
 
@@ -37,6 +38,7 @@ def review_manuscript(
 
 if __name__ == "__main__":
     print(f"Starting mock editorial MCP at http://{HOST}:{PORT}/mcp")
+    print(f"Allowed Host headers: {', '.join(allowed_hosts)}")
     mcp.run(
         transport="streamable-http",
         host=HOST,

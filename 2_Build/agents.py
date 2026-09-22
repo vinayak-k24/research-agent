@@ -11,7 +11,7 @@ from azure.ai.projects import AIProjectClient
 from azure.ai.projects.models import PromptAgentDefinition
 from tools import get_code_interpreter_tool, get_editorial_mcp_tool, CHECK_THRESHOLDS_TOOL
 
-load_dotenv()
+load_dotenv(override=True)
 
 def create_manuscript_agents(
     project_client: AIProjectClient,
