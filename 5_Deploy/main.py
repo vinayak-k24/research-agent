@@ -175,7 +175,7 @@ def load_existing_agents(project_client):
 
 def run_manuscript_review_pipeline(manuscript_path=None):
     """Executes end-to-end multi-agent review pipeline with HITL approval loop."""
-    load_dotenv()
+    load_dotenv(override=True)
 
     endpoint = os.environ.get("FOUNDRY_PROJECT_ENDPOINT")
     model_name = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-5.6-sol")

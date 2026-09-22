@@ -5,7 +5,7 @@
 ## Executive Summary
 
 - Overall Trust Index: **21/100**
-- Editorial MCP: **Disabled**
+- Editorial MCP: **Enabled**
 - Threshold gate: `{"status": "HumanReviewRequired", "reason": "Trust Index Score (21%) is below the minimum threshold (90.0%).", "trust_score": 21}`
 - Detected review issues: **5**
 
@@ -55,9 +55,9 @@ The anonymizer removed or masked identifying content before the specialist audit
 ```text
 # Quantum Machine Learning for Drug Discovery
 
-**Authors:** [Removed for double-blind review]  
-**Affiliation:** [Removed for double-blind review]  
-**Grant information:** [Removed for double-blind review]
+**Authors:** [Anonymized for double-blind review]  
+**Affiliation:** [Anonymized for double-blind review]  
+**Grant ID:** [Anonymized for double-blind review]
 
 ## Abstract
 
@@ -66,7 +66,7 @@ We report 99.4% prediction accuracy for binding affinity using a quantum-enhance
 ## Methods and Ethics
 
 Human subject data were collected in 2024. IRB approval code: NONE (Exempt). No consent statement is provided.  
-The data repository is [Anonymized repository URL] and is described as CC-BY licensed, but no license file is included.
+The data repository is [anonymized repository URL] and is described as CC-BY licensed, but no license file is included.
 
 ## Results
 
@@ -79,8 +79,10 @@ The manuscript claims 99.4% accuracy, although the table reports only two small 
 
 ## References
 
-[Author names removed], 2023. DOI: 10.9999/fake-doi-182.  
+[Author citation anonymized], 2023. DOI: 10.9999/fake-doi-182.  
 This paragraph repeats a generic claim that the model is “highly accurate and robust” without a source or supporting experiment.
+
+*No PDF was supplied, so hidden PDF metadata could not be inspected or removed.*
 ```
 
 ## Problems And Why They Matter
@@ -109,133 +111,151 @@ This paragraph repeats a generic claim that the model is “highly accurate and 
 
 | Agent | Score | Meaning |
 | --- | ---: | --- |
-| Plagiarism / AI Similarity Auditor | 58 | 100 = original / low similarity risk |
-| Equations & Math Auditor | 28 | 100 = mathematically sound |
+| Plagiarism / AI Similarity Auditor | 61 | 100 = original / low similarity risk |
+| Equations & Math Auditor | 22 | 100 = mathematically sound |
 | Citation Integrity Auditor | 5 | 100 = citation integrity |
-| Statistical Contradiction Detector | 28 | 100 = internally consistent data |
-| Dataset & License Auditor | 12 | 100 = reproducible and licensed |
-| Ethics & Legal Auditor | 0 | 100 = ethics compliance |
+| Statistical Contradiction Detector | 25 | 100 = internally consistent data |
+| Dataset & License Auditor | 10 | 100 = reproducible and licensed |
+| Ethics & Legal Auditor | 5 | 100 = ethics compliance |
 
 ### Plagiarism / AI Similarity Auditor
 
-**SCORE: 58/100** — moderate originality, with some AI-assisted or template-driven rewriting risk; plagiarism cannot be established from the text alone.
+**SCORE: 61/100** — moderate originality, with some structural AI-paraphrasing indicators but no strong evidence of direct plagiarism.
 
 ### Evidence
 
-- **Uniform syntax rhythm:** Most sentences are concise declarative statements with similar structure and cadence. Repeated passive constructions—“is described,” “were collected,” “is provided,” and “is included”—create a mechanically consistent style.
-- **Limited vocabulary dispersion:** The manuscript repeatedly relies on generic reporting terms such as “report,” “claims,” “described,” and “provided,” rather than varied technical explanation.
-- **Meta-evaluative phrasing:** Sentences such as “This result is described as conclusive…” and “The manuscript claims…” read more like reviewer commentary or generated critical summaries than ordinary research reporting.
-- **Template-like organization:** Each section presents a claim immediately followed by an explicit deficiency. This unusually systematic pattern may indicate synthetic construction or AI-guided rewriting.
-- **Generic stock phrase:** “Highly accurate and robust” is common academic boilerplate. Its use without attribution or experimental support raises reuse risk, but it is too generic by itself to demonstrate plagiarism.
-- **Low evidence of direct copying:** There are no long, stylistically distinctive passages or abrupt shifts in terminology that strongly suggest copied-and-pasted material. The short length also limits reliable stylometric assessment.
-- **Internal inconsistencies:** The text alternates between human-subject data and a synthetic benchmark, while the reported 99.4% accuracy is not reconciled with the table. These are research-validity concerns, not direct plagiarism evidence.
-- **Reference concerns:** The placeholder-like DOI and anonymized citation prevent source verification. Consequently, textual overlap and attribution adequacy cannot be checked.
+- **Templated syntax:** Several sentences follow a repeated pattern: claim followed by qualification or deficiency—e.g., “is described as conclusive without…,” “is described as CC-BY licensed, but…,” and “claims 99.4% accuracy, although….” This regular cadence can indicate editorial or AI-assisted rewriting.
+- **Limited vocabulary dispersion:** Words such as *described*, *reported*, *claims*, and *provided* recur in a short passage. The prose relies heavily on generic evaluative language rather than field-specific methodological detail.
+- **Summary-like rather than manuscript-like voice:** Statements such as “The manuscript claims…” and “This paragraph repeats…” sound like reviewer commentary embedded into the paper. This suggests the text may have been transformed from an audit, critique, or prompt-generated summary.
+- **Generic phraseology:** “Highly accurate and robust” is a common stock phrase. Without a source, it is weakly attributable, though not distinctive enough by itself to establish copying.
+- **No clear phrase-level plagiarism signal:** The wording is mostly generic, concise, and not obviously traceable to a distinctive source from internal analysis alone.
+- **Citation uncertainty:** The placeholder-style DOI and anonymized citation cannot be verified here. This is a source-integrity concern, not direct evidence of plagiarism.
+- **Small sample:** The manuscript is too short for reliable stylometric attribution. Headings, anonymization notices, tables, and the PDF-metadata note should not be treated as AI-authorship evidence.
 
 ### Comments
 
-The strongest signal is **AI-assisted summarization or template construction**, not conventional plagiarism. The prose has a uniform, diagnostic tone and explicitly narrates weaknesses that authors would normally resolve in revision. A definitive plagiarism finding would require comparison against published literature, repository history, drafts, and citation sources.
+The principal risk is **structural AI-assisted rewriting or templated editorial prose**, not obvious verbatim plagiarism. A definitive plagiarism finding would require comparison against external publications, repositories, preprints, and the cited 2023 source. AI authorship also cannot be established reliably from linguistic features alone.
 
 ### Equations & Math Auditor
 
-**SCORE: 28/100**
+**SCORE: 22/100** — the tabulated arithmetic is superficially consistent, but the main numerical claim is unsupported and the quantities are not adequately defined for dimensional review.
 
-The table arithmetic is internally readable, but the central 99.4% claim is unsupported and is incompatible with a straightforward 55-sample accuracy calculation.
+### Recalculation
 
-### Recalculations
-
-- Total sample count:
+- Total sample size:
   \[
   25+30=55,
   \]
-  which agrees with the stated 55 molecular samples.
+  which matches the stated 55 molecular samples.
 
-- If the two reported means are combined using their group sizes, the weighted mean is:
+- Sample-size-weighted reported mean:
   \[
   \frac{25(84.1\%)+30(72.3\%)}{55}
-  =77.664\%\approx77.7\%.
+  =77.66\%.
   \]
-  This does not support or reproduce the reported 99.4% accuracy.
+  This does not reconcile with the claimed **99.4% prediction accuracy**.
 
-- A simple accuracy calculated from 55 independent predictions must change in increments of:
+- Difference between group means:
   \[
-  \frac{1}{55}\times100\%=1.818\%.
+  84.1\%-72.3\%=11.8
   \]
-  Thus, nearby possible values include:
-  \[
-  \frac{54}{55}=98.18\%,\qquad
-  \frac{55}{55}=100\%.
-  \]
-  A value of 99.4% would imply:
-  \[
-  0.994(55)=54.67
-  \]
-  correct predictions, which is impossible when correctness is counted per sample. The claim could only be valid if it uses another denominator, repeated observations, cross-validation averaging, or a non-count-based metric; none is specified.
+  percentage points. No standard deviations, confidence intervals, or raw observations are supplied, so the uncertainty or significance of this difference cannot be checked.
 
-- Both reported p-values exceed the conventional threshold of 0.05:
+- Both reported p-values exceed the conventional 0.05 threshold:
   \[
   0.14>0.05,\qquad 0.08>0.05.
   \]
-  Neither is conventionally statistically significant. No test statistic, null hypothesis, effect estimate, confidence interval, or multiple-testing procedure is reported.
+  Thus, neither result is conventionally statistically significant. The relevant hypotheses and statistical tests are also unspecified.
 
-### Dimensional and definitional issues
+### Problems with the 99.4% claim
 
-- Sample size \(N\) is a dimensionless count, and p-values and percentages are dimensionless, so the displayed table has no direct unit-conversion error.
-- However, **binding affinity normally requires a defined physical or transformed quantity**, such as \(K_d\) in nM, \(IC_{50}\), \(pK_d\), or binding free energy in kcal/mol or kJ/mol. No target variable or unit is given.
-- “Reported Mean” is expressed as a percentage but is not identified as accuracy, probability, normalized affinity, or another quantity.
-- Accuracy itself is undefined: there is no classification threshold, numerator, denominator, class distribution, error tolerance, or evaluation protocol.
-- The description of the same observations as human-subject data and a synthetic molecular benchmark makes the population and measurement units ambiguous.
+If “accuracy” represents correct predictions among exactly 55 independent samples, the possible values occur in increments of
 
-### Conclusion
+\[
+\frac{1}{55}\times100\%=1.818\%.
+\]
 
-There are no explicit equations to validate. The only verifiable count—\(25+30=55\)—is correct, but the 99.4% headline result cannot be reconstructed from the table and is not attainable as ordinary sample-level accuracy with \(N=55\). The manuscript needs a precise metric formula, evaluation denominator, held-out or cross-validation protocol, uncertainty estimates, and units for binding affinity.
+For example:
+
+\[
+\frac{54}{55}=98.18\%,\qquad \frac{55}{55}=100\%.
+\]
+
+Therefore, **99.4% cannot be a simple accuracy proportion based on 55 binary outcomes**. It could arise from averaging folds, repeated trials, multiple labels, or a different denominator, but none is defined.
+
+Additionally, no held-out test set, cross-validation design, confusion matrix, prediction count, or uncertainty interval is reported. Describing the result as “conclusive” is mathematically unjustified.
+
+### Dimensional consistency
+
+- Binding affinity is normally a continuous physical quantity reported as \(K_d\), \(K_i\), \(IC_{50}\), concentration units such as nM or \(\mu\)M, or binding free energy such as kcal/mol.
+- Prediction accuracy is dimensionless and normally applies to classification.
+- The reported means are percentages, but the manuscript does not explain what they measure. They cannot be interpreted as binding affinities without a normalization or conversion definition.
+- The p-values are dimensionless, but their associated test statistics, hypotheses, and outcome variables are absent.
+
+### Overall assessment
+
+The only clearly consistent numerical fact is that the two group sizes sum to 55. There are no equations or statistical derivations to verify, and the central 99.4% result is neither reproducible nor compatible with a straightforward 55-sample accuracy calculation. The manuscript needs explicit metric definitions, denominators, units, validation protocol, uncertainty estimates, and statistical-test specifications.
 
 ### Citation Integrity Auditor
 
-**SCORE: 5/100**
+**SCORE: 5/100** — citation integrity is critically weak.
 
 ## DOI audit
 
-| Cited reference | Crossref verification | Finding |
-|---|---|---|
-| `[Author names removed], 2023. DOI: 10.9999/fake-doi-182` | No credible Crossref bibliographic record is identifiable for this DOI | **Dead or fabricated DOI; reference is not verifiable** |
+### `10.9999/fake-doi-182`
 
-### Evidence
+- **Status:** Invalid or nonresolving DOI; no credible Crossref record identified.
+- **Reason:** The string is explicitly constructed as a placeholder (“fake-doi-182”) and does not correspond to a verifiable scholarly work.
+- **Reference match:** Cannot be matched to the incomplete citation “[Author citation anonymized], 2023.”
+- **Flag:** **Dead or hallucinated DOI/reference.**
 
-- The manuscript contains **one inline DOI**: `10.9999/fake-doi-182`.
-- The suffix `fake-doi-182` is overtly placeholder-like.
-- The citation lacks a title, journal or publisher, volume, issue, pages/article number, and enough author information for independent matching.
-- No verified Crossref metadata links this DOI to a 2023 publication relevant to quantum machine learning, binding affinity, or drug discovery.
-- The asserted year, 2023, therefore cannot be confirmed against a Crossref record.
-- The generic statement that the model is “highly accurate and robust” has **no citation at all**, so it cannot be traced to the listed reference or another source.
+A DOI URL would be:
 
-## Claim-to-citation assessment
+`https://doi.org/10.9999/fake-doi-182`
 
-The manuscript provides no usable citation supporting:
+It should not be retained unless the authors can provide a resolving DOI and matching bibliographic metadata.
 
-- the 99.4% accuracy claim;
-- the purported robustness of the model;
-- the quantum-enhanced methodology;
-- the binding-affinity application;
-- the treatment of the dataset as a public synthetic benchmark.
+## Reference completeness
 
-Even if the listed DOI were valid, the incomplete reference gives no clear indication which claim it is intended to support.
+The sole reference lacks:
+
+- author names or an appropriate blinded-reference convention,
+- article title,
+- journal or proceedings title,
+- volume, issue, and pages or article number,
+- publisher,
+- verifiable DOI metadata.
+
+Anonymization does not justify omitting all title and publication metadata. If this is a self-citation, a double-blind format could use “Author(s), 2023” while preserving the title, venue, and other nonidentifying information where journal policy permits.
+
+## Claim-to-citation alignment
+
+The following claims have no usable supporting citation:
+
+- 99.4% binding-affinity prediction accuracy;
+- characterization of the quantum-enhanced model;
+- use or provenance of the purported public synthetic benchmark;
+- the statement that the model is “highly accurate and robust”;
+- the repository’s alleged CC-BY licensing.
+
+The only nominal reference cannot support these claims because it is incomplete and its DOI is unverifiable. No inline citation connects the reference to a specific statement.
 
 ## Required corrections
 
-1. Replace `10.9999/fake-doi-182` with a resolvable DOI from the cited work’s publisher or Crossref record.
-2. Restore enough bibliographic information for verification while preserving double-blind review—normally title, journal, year, volume, and pages or article number. Author names should only be masked if their disclosure would compromise anonymity.
-3. Add direct citations for the methodological and performance claims.
-4. Remove or qualify “highly accurate and robust” unless supported by appropriate held-out testing, uncertainty estimates, and robustness experiments.
-
-**Overall finding:** Citation integrity is critically weak because the sole reference appears fabricated or non-resolving, has insufficient metadata, and does not substantiate the manuscript’s principal claims.
+1. Replace the DOI with a genuine resolving DOI verified against Crossref metadata.
+2. Restore sufficient bibliographic details to identify the work.
+3. Add inline citations at the exact claims they support.
+4. Cite the benchmark dataset and repository release separately.
+5. Provide a permanent repository identifier, version, and actual license record.
+6. Remove or qualify “highly accurate and robust” unless supported by held-out validation, uncertainty estimates, and comparative experiments.
 
 ### Statistical Contradiction Detector
 
-**SCORE: 28/100**
+**SCORE: 25/100** — N-counts are arithmetically consistent, but the p-values are unverifiable and the 99.4% accuracy claim is not supported by Table 1.
 
 ## Parsed Table 1
 
-| Compound | Measured N | Reported Mean | p-value |
+| Compound | N | Reported mean | p-value |
 |---|---:|---:|---:|
 | Cmp-A | 25 | 84.1% | 0.14 |
 | Cmp-B | 30 | 72.3% | 0.08 |
@@ -243,211 +263,210 @@ Even if the listed DOI were valid, the incomplete reference gives no clear indic
 
 ## Verification
 
-### 1. N-counts: consistent
+### 1. N-counts: Pass
 
 \[
 25+30=55
 \]
 
-The table total agrees with the manuscript’s statement that the model was trained on 55 molecular samples.
+The group counts match the manuscript’s stated total of 55 molecular samples. However, the table does not clarify whether groups are mutually exclusive, independent, or the same units used to calculate accuracy.
 
-### 2. Reported means do not support 99.4%
+### 2. Reported means: Do not support 99.4%
 
-If the percentages are group-level accuracies or comparable means, their N-weighted aggregate is:
-
-\[
-\frac{25(84.1)+30(72.3)}{55}=77.66\%\approx77.7\%.
-\]
-
-The unweighted average is:
+If the two means measure the same outcome, their N-weighted mean is:
 
 \[
-\frac{84.1+72.3}{2}=78.2\%.
+\frac{25(84.1)+30(72.3)}{55}=77.66\%.
 \]
 
-Neither calculation produces 99.4%. The “Reported Mean” metric is not defined, so aggregation may not be appropriate, but the table provides no visible numerical support for the headline accuracy.
+The unweighted mean is 78.2%. Neither calculation yields 99.4%.
 
-### 3. A 99.4% count-based accuracy is impossible for \(N=55\)
+The group difference is:
 
-A simple sample-level accuracy would have increments of:
+\[
+84.1\%-72.3\%=11.8\text{ percentage points}.
+\]
+
+No variance, standard error, confidence interval, or raw data are provided.
+
+### 3. P-values: Valid range, but unverifiable
+
+Both values are numerically valid probabilities:
+
+- Cmp-A: \(p=0.14\)
+- Cmp-B: \(p=0.08\)
+
+Both exceed \(0.05\), so neither is conventionally statistically significant at the 5% level. They cannot be recalculated because the manuscript omits:
+
+- the statistical test,
+- null and alternative hypotheses,
+- test statistics and degrees of freedom,
+- comparison or reference values,
+- variances or raw observations,
+- one- versus two-sided specification.
+
+A separate p-value for each compound is also ambiguous because the comparison being tested is not identified.
+
+### 4. Accuracy claim: Unsupported and potentially impossible for 55 binary outcomes
+
+For 55 sample-level binary predictions, accuracy changes in increments of:
 
 \[
 \frac{1}{55}\times100=1.818\%.
 \]
 
-The nearest possible outcomes are:
+The closest possible values are:
 
 - \(54/55=98.18\%\)
 - \(55/55=100.00\%\)
 
-Claimed accuracy implies:
-
-\[
-0.994\times55=54.67
-\]
-
-correct predictions, which is not an integer. Thus, 99.4% cannot be ordinary accuracy over exactly 55 cases. It might result from cross-validation averaging, repeated measurements, per-pair predictions, or another denominator, but none is disclosed.
-
-### 4. P-values: valid range but not verifiable
-
-- Cmp-A: \(p=0.14\)
-- Cmp-B: \(p=0.08\)
-
-Both lie in the valid interval \([0,1]\), but neither meets the conventional \(p<0.05\) threshold. They also would not survive a two-test Bonferroni threshold of \(0.05/2=0.025\).
-
-The p-values cannot be recalculated because the manuscript provides no:
-
-- statistical test;
-- null hypothesis;
-- variance or standard deviation;
-- raw observations;
-- comparison/control values;
-- degrees of freedom or test statistics.
+Thus, **99.4% cannot be the direct proportion of correct predictions among 55 samples**. It might be an average over folds, repeated runs, labels, or molecular pairs, but the required denominator and protocol are missing.
 
 ## Conclusion
 
-The N-counts reconcile exactly, but the p-values are unsupported and the 99.4% accuracy is neither derivable from the table nor possible as simple accuracy with a denominator of 55. The manuscript must define the reported means, accuracy formula, evaluation denominator, testing protocol, and statistical tests.
+The total \(N=55\) is correct. The table does not reproduce or substantiate 99.4% accuracy, and its p-values cannot be independently verified. The manuscript should provide the evaluation denominator, prediction counts, test-set protocol, metric formula, statistical tests, uncertainty estimates, and raw or sufficient summary data.
 
 ### Dataset & License Auditor
 
-**SCORE: 12/100**
-
-The dataset cannot currently be verified as accessible, openly licensed, reproducible, or safe for public release.
+**SCORE: 10/100** — the dataset is not accessible or reproducible, its license cannot be verified, and the human-subject-data description creates unresolved privacy and ethics risks.
 
 ## Evidence
 
-### 1. Dataset link: not auditable
+### 1. Dataset link: Not auditable
 
-- The only location is `[Anonymized repository URL]`, which is not resolvable.
-- No archive, DOI, accession number, commit hash, release tag, or checksum is supplied.
-- No attachments or data files are available for schema inspection or row-level privacy scanning.
-- Double-blind anonymization can justify hiding the repository temporarily, but reviewers still need an anonymous repository or archival snapshot.
+The only link is:
 
-### 2. License: unverified
+`[anonymized repository URL]`
 
-- The manuscript describes the dataset as “CC-BY licensed” but explicitly says no license file is included.
-- The CC-BY version is unspecified; for example, CC BY 4.0 should be stated explicitly.
-- A textual assertion is insufficient to establish:
-  - who owns the data;
-  - whether the depositor may license it;
-  - which files the license covers;
-  - required attribution;
-  - whether human-subject restrictions override redistribution rights.
-- Public GitHub availability alone would not grant reuse rights.
-- If software is included, it should generally have a separate software license such as MIT; CC-BY is not ideal for source code.
+This is a placeholder rather than a resolvable repository address. Therefore, it is impossible to verify:
 
-### 3. Reproducibility: critically incomplete
+- repository existence and public accessibility,
+- file contents and history,
+- release or commit version,
+- data completeness,
+- code and documentation,
+- checksums or persistent identifiers,
+- whether the repository contains hidden identifiers.
 
-The text provides no verifiable:
+No dataset attachment was supplied for inspection.
 
-- dataset files or machine-readable schema;
-- data dictionary or units for binding affinity;
-- code, dependency lockfile, or environment specification;
-- preprocessing and feature-generation procedure;
-- random seeds;
+### 2. License: Unverified
+
+The manuscript says the repository is CC-BY licensed but also acknowledges that no license file is included. Consequently:
+
+- no enforceable CC-BY grant is demonstrated;
+- the CC-BY version is unspecified, such as CC BY 4.0;
+- attribution requirements and copyright ownership are unclear;
+- third-party or human-subject data may not be legally redistributable;
+- no MIT or other software license is identified for code.
+
+A statement in the manuscript is not an adequate substitute for a repository-level `LICENSE` file and provenance record.
+
+### 3. Reproducibility: Critically insufficient
+
+The manuscript does not provide:
+
+- raw or processed data;
+- preprocessing and exclusion rules;
+- feature definitions or data schema;
+- model source code and quantum-circuit specification;
 - train/validation/test assignments;
-- held-out test protocol;
-- cross-validation folds;
-- model configuration or quantum backend details;
+- random seeds;
+- package and hardware versions;
 - evaluation denominator;
-- raw predictions and labels;
-- statistical test definitions;
-- versioned release or checksums.
+- executable environment;
+- expected outputs or checksums.
 
-Although the two table counts sum to 55, this does not make the 99.4% result reproducible. As previously calculated, 99.4% is not possible as simple count-based accuracy over 55 observations.
+The two table counts sum correctly to 55, but this alone does not establish reproducibility. The reported 99.4% accuracy cannot be reconstructed from the table or a simple 55-sample accuracy denominator.
 
-### 4. PHI/PII leakage risk: unresolved and potentially high
+### 4. PHI/PII risk: Unresolved
 
-No direct PII appears in the supplied clean text: author names, email addresses, affiliations, grant ID, and repository account information have been removed. Compound labels `Cmp-A` and `Cmp-B` are not personal identifiers.
+The displayed manuscript has no obvious direct identifiers after anonymization. Author names, email, affiliation, grant number, and repository account were removed.
 
-However, the underlying dataset presents significant unresolved risk:
+The underlying dataset remains high risk because it is described as both:
 
-- It is explicitly described as containing **human-subject data collected in 2024**.
-- No consent or data-sharing statement is provided.
-- `IRB approval code: NONE (Exempt)` is not sufficient evidence of an institutional exemption determination.
-- The text simultaneously calls the data human-subject data and a public synthetic benchmark. These classifications have very different privacy and governance requirements.
-- No de-identification standard, disclosure-risk analysis, data-use agreement, or controlled-access procedure is described.
-- No files are available to scan for names, emails, medical record numbers, dates, locations, free text, filenames, image metadata, genomic identifiers, or rare combinations of quasi-identifiers.
-- Repository history, deleted files, Git LFS objects, releases, notebooks, logs, and issue attachments could retain identifiers even if current files are clean.
+- **human-subject data**, and
+- a **public synthetic benchmark**.
 
-A collection year alone is not necessarily direct PHI, but it can contribute to re-identification when combined with demographics, diagnoses, institutions, or rare molecular/clinical characteristics.
+Those descriptions are materially inconsistent. If the data are human-derived, no evidence is given for:
+
+- consent or consent waiver;
+- an actual IRB determination;
+- de-identification methodology;
+- HIPAA Safe Harbor or expert determination;
+- removal of names, medical-record numbers, dates, locations, contact details, or persistent subject IDs;
+- assessment of indirect and linkage-based re-identification;
+- authorization for public redistribution.
+
+“IRB approval code: NONE (Exempt)” is not a verifiable approval or exemption record. Exempt status also does not automatically permit unrestricted public release.
 
 ## Required remediation
 
-1. Provide an anonymous, reviewer-accessible archival link pinned to a commit or release.
-2. Add an explicit license file, version, copyright holder, and file-level scope.
-3. Separate the dataset license from the code license.
-4. Clarify whether the dataset is genuinely synthetic, de-identified human data, or a mixture.
-5. Supply documentation of IRB approval or exemption and the legal basis for sharing.
-6. Add consent or consent-waiver language.
-7. Run direct-identifier and quasi-identifier scans over all files and full repository history.
-8. Publish reproducibility artifacts: data dictionary, provenance, preprocessing, splits, code, environment, seeds, predictions, and checksums.
-9. Use controlled access rather than a public repository if re-identification risk remains.
-
-**Conclusion:** The manuscript text itself contains no obvious residual PII, but the underlying dataset’s license, provenance, reproducibility, and human-subject safety cannot be verified. Public release should not proceed until those issues are resolved.
+1. Supply a resolvable, reviewer-accessible repository or archived release.
+2. Add a specific license file, such as `CC-BY-4.0` for eligible data and MIT for original code.
+3. Clarify whether the data are human-derived, de-identified, or fully synthetic.
+4. Provide the IRB exemption determination and consent or waiver statement.
+5. Run and document direct-identifier and quasi-identifier screening.
+6. Add provenance, schema, preprocessing, splits, seeds, dependencies, and execution instructions.
+7. Archive a fixed version with a DOI, release tag, and file checksums.
+8. If public release is not ethically permitted, provide controlled access and a synthetic reproducibility dataset instead.
 
 ### Ethics & Legal Auditor
 
-**SCORE: 0/100**
+**SCORE: 5/100**
 
-## HARD BLOCKER — IRB approval or exemption is not verifiable
+## HARD BLOCKER — IRB approval or exemption is not verified
 
-The statement:
+The statement **“IRB approval code: NONE (Exempt)”** is not a valid, verifiable approval record. An exemption may be legitimate, but the manuscript must ordinarily report or document an institutional determination rather than presenting “NONE” as an approval code.
 
-> “IRB approval code: NONE (Exempt)”
+Missing elements include:
 
-does not demonstrate valid ethics oversight. “Exempt” generally requires a documented determination by the responsible IRB, ethics committee, or authorized institutional official; it should not be asserted solely by investigators.
-
-Missing information includes:
-
-- reviewing institution and IRB/ethics committee name;
+- reviewing institution or IRB;
 - protocol or exemption determination number;
-- date of determination;
-- applicable exemption category and jurisdiction;
-- confirmation that the determination covered the 2024 data collection;
-- whether identifiable private information or biospecimens were used;
-- permission for secondary use and public data sharing.
+- approval/determination date;
+- applicable exemption category;
+- whether data were identifiable or coded;
+- whether the IRB waived consent or documentation of consent;
+- scope of authorized data use and public sharing.
 
-Because the manuscript explicitly says human-subject data were collected, the absence of verifiable approval or exemption documentation is a **hard blocker**.
+No exemption letter or other institutional documentation was supplied. IRB identifiers are not always publicly searchable, so verification requires the determination letter or confirmation from the named institution.
 
-## HARD BLOCKER — informed consent is unsupported
+## Consent validity: Cannot be established
 
-No consent statement is provided. The manuscript does not establish that participants:
+The manuscript contains **no informed-consent statement**. It also does not report:
 
-- gave informed consent for research participation;
-- authorized secondary analysis;
-- agreed to public repository distribution;
-- consented to international or commercial reuse, if applicable; or
-- were covered by a formally approved waiver or alteration of consent.
+- whether participants provided research consent;
+- whether consent covered secondary analysis and repository release;
+- whether parental permission or assent was relevant;
+- whether an IRB approved a consent waiver;
+- whether only fully de-identified preexisting data were used.
 
-A valid waiver must be stated and linked to the IRB determination. Describing the project as exempt does not automatically eliminate consent, privacy, or data-sharing obligations.
+If consent was waived, the manuscript must identify the approving IRB and describe the waiver. Merely asserting that the study was exempt does not establish that consent was unnecessary or that public distribution was authorized.
 
-## Additional inconsistency
+## Material contradiction
 
-The data are characterized as both:
+The data are described both as **human-subject data collected in 2024** and as a **public synthetic benchmark**. These categories have different oversight requirements. The authors must establish whether the dataset is:
 
-1. human-subject data collected in 2024; and  
-2. a public synthetic benchmark.
+1. newly collected human-subject data;
+2. secondary human-derived data;
+3. de-identified human data; or
+4. entirely synthetic data with no identifiable human source.
 
-These classifications are incompatible unless the manuscript explains which records are synthetic, how they were generated, and whether any source human data remain identifiable or traceable. Until clarified, the dataset should be treated as human-subject data.
+Until clarified, neither the exemption nor the consent status can be evaluated reliably.
 
 ## Clinical-trial registration
 
-No registration is reported. The text does not provide enough information to determine whether this was a prospective interventional clinical trial. If participants were prospectively assigned to an intervention to assess health outcomes, a registry identifier and registration date are required. If this was observational or secondary analysis, the authors should state that trial registration was not applicable.
+No clinical intervention or prospective trial is described, so trial registration cannot presently be assessed as required. If participants were prospectively assigned to an intervention, a registration identifier and registration timing must be provided.
 
-## Required correction
+## Required resolution
 
 Publication and public data release should be blocked until the authors provide:
 
-1. the IRB approval or exemption determination identifier;
-2. committee name, institution, determination date, and exemption category;
-3. an informed-consent statement or documented IRB-approved waiver;
-4. explicit authorization for data sharing;
-5. clarification of whether the dataset is human-derived or fully synthetic;
-6. de-identification and privacy safeguards; and
-7. a clinical-trial registration number or a justified not-applicable statement.
-
-**Conclusion:** Neither IRB status nor consent validity can be verified. Ethics compliance is incomplete, with two hard blockers.
+- an IRB approval or formal exemption determination;
+- protocol/determination number, institution, date, and category;
+- a consent statement or documented IRB-approved waiver;
+- clarification of human versus synthetic data provenance;
+- confirmation that consent or authorization permits the stated analysis and data sharing.
 
 ## Editorial Decision
 
@@ -457,204 +476,143 @@ Publication and public data release should be blocked until the authors provide:
 
 **Trust Index Score: 21/100**  
 **Required threshold: 90/100**  
-**Threshold result: `HumanReviewRequired`**
+**Threshold result: HUMAN REVIEW REQUIRED**
 
-> Trust Index Score (21%) is below the minimum threshold (90.0%).
-
-**Recommendation:** Do not accept in the present form. Escalate for human editorial review. Ethics documentation, consent status, dataset provenance, and the primary performance claim are hard blockers.
-
----
+The manuscript should not proceed to acceptance or unrestricted data release in its current form. Ethics documentation, citation verification, data provenance, and validation are hard blockers.
 
 ## Trust Index calculation
 
-No publisher-specific weighting rubric was supplied, so the five completed audits were weighted equally.
+| Domain | Weight | Domain score | Weighted contribution |
+|---|---:|---:|---:|
+| Numerical and statistical validity | 25% | 22/100 | 5.50 |
+| Ethics and consent | 20% | 5/100 | 1.00 |
+| Data, licensing, privacy, and reproducibility | 20% | 10/100 | 2.00 |
+| Citation integrity | 15% | 5/100 | 0.75 |
+| Originality and AI-paraphrasing risk | 10% | 61/100 | 6.10 |
+| Double-blind/anonymization integrity | 10% | 56/100 | 5.60 |
+| **Total** | **100%** | — | **20.95 ≈ 21/100** |
 
-| Audit domain | Score |
-|---|---:|
-| Originality and AI-paraphrasing risk | 58 |
-| Equations, numerical claims, and dimensional consistency | 28 |
-| DOI and reference integrity | 5 |
-| Dataset access, licensing, reproducibility, and privacy | 12 |
-| IRB approval and consent validity | 0 |
-| **Arithmetic mean** | **20.6** |
-| **Rounded Trust Index** | **21/100** |
+The anonymization score is limited because visible identifiers were removed, but the unavailable repository and incomplete self-citation prevent a full identity-leakage audit. No PDF metadata or repository history was available.
 
-The ethics hard blockers independently require human review regardless of the aggregate score.
+## Consolidated findings
 
----
+### 1. Ethics and consent — HARD BLOCKER
 
-## Hard blockers
+- “IRB approval code: NONE (Exempt)” is not a verifiable approval or exemption record.
+- No institution, protocol number, determination date, or exemption category is supplied.
+- No consent statement or IRB-approved waiver is reported.
+- The data are inconsistently described as human-subject data and as a synthetic benchmark.
+- Public release authorization and de-identification procedures are undocumented.
 
-### HB-1: IRB or exemption determination cannot be verified
+**Required:** formal IRB approval/exemption documentation, consent or waiver statement, and definitive data-provenance classification.
 
-The statement `IRB approval code: NONE (Exempt)` is not adequate documentation of ethics oversight. The manuscript provides no:
+### 2. Numerical validity — MAJOR CONCERN
 
-- IRB or ethics committee name;
-- institution;
-- protocol or exemption determination number;
-- determination date;
-- exemption category;
-- confirmation that the determination covered the 2024 collection;
-- authorization for secondary use or public distribution.
-
-An exemption ordinarily requires a documented determination by the responsible institution or authorized ethics body, subject to applicable jurisdiction and institutional policy.
-
-### HB-2: Consent validity cannot be established
-
-No informed-consent statement or IRB-approved waiver is reported. There is no evidence that participants consented to:
-
-- research participation;
-- secondary analysis;
-- public data sharing;
-- commercial or international reuse, where applicable.
-
-“Exempt” does not by itself demonstrate that consent and privacy requirements were satisfied.
-
-### HB-3: Human-data classification is contradictory
-
-The dataset is described as both human-subject data and a public synthetic benchmark. The manuscript must establish whether it contains:
-
-- original human observations;
-- de-identified human data;
-- human-derived synthetic data; or
-- entirely artificial benchmark records.
-
-Until resolved, the records must be treated as potentially sensitive human-subject data.
-
-### HB-4: Central 99.4% result is not reproducible
-
-The table contains \(25+30=55\) observations. For ordinary count-based accuracy over 55 cases:
+The table counts are internally consistent:
 
 \[
-0.994 \times 55 = 54.67
+25+30=55.
 \]
 
-which cannot represent an integer number of correct predictions. The nearest possible values are:
+However, the N-weighted table mean is:
 
 \[
-54/55=98.18\%, \qquad 55/55=100.00\%.
+\frac{25(84.1)+30(72.3)}{55}=77.66\%,
 \]
 
-No alternate denominator, repeated-evaluation scheme, fold averaging, or non-count-based metric is defined.
+not 99.4%.
 
----
-
-## Major findings
-
-### Numerical and statistical integrity
-
-- The group counts correctly total 55.
-- If the reported percentages are comparable group-level means, their weighted aggregate is:
+For 55 binary predictions, accuracy changes in increments of:
 
 \[
-\frac{25(84.1)+30(72.3)}{55}=77.66\%.
+100/55=1.818\%.
 \]
 
-This does not support 99.4%.
+Thus, 99.4% cannot be a direct count-based accuracy among 55 samples; the closest values are 98.18% and 100%. The denominator, validation protocol, and metric formula are missing.
 
-- The p-values, 0.14 and 0.08, are within the valid numerical range but both exceed 0.05.
-- Neither would meet a two-comparison Bonferroni threshold of 0.025.
-- The p-values cannot be reproduced because the statistical tests, null hypotheses, variance estimates, controls, test statistics, and raw observations are absent.
-- Binding affinity lacks a defined quantity or unit, such as \(K_d\), \(IC_{50}\), \(pK_d\), or binding free energy.
-- “Reported Mean” is undefined.
+Both reported p-values exceed 0.05:
 
-### Evaluation-design deficiencies
+- \(p=0.14\)
+- \(p=0.08\)
 
-The manuscript calls the result conclusive despite providing no:
+They cannot be independently verified because no tests, hypotheses, variances, test statistics, or degrees of freedom are provided.
 
-- held-out test set;
-- cross-validation design;
-- train/test split;
-- evaluation denominator;
-- class distribution;
-- decision threshold;
-- confidence interval;
-- uncertainty estimate;
-- baseline comparison;
-- robustness or sensitivity analysis.
+**Required:** raw prediction counts, evaluation denominator, held-out or cross-validation protocol, uncertainty intervals, statistical-test definitions, and raw or sufficient summary data.
 
-A model trained or evaluated on only 55 samples is particularly susceptible to overfitting and unstable estimates.
+### 3. Dimensional consistency — MAJOR CONCERN
 
-### Reference integrity
+- Binding affinity ordinarily has physical units or is represented by quantities such as \(K_d\), \(K_i\), \(IC_{50}\), or \(\Delta G\).
+- “Accuracy” is dimensionless and normally applies to classification.
+- The table’s percentage means are undefined.
+- No threshold or transformation connecting affinity values to accuracy is reported.
 
-The sole citation is:
+**Required:** units, endpoint definition, normalization or classification threshold, and metric equation.
 
-`10.9999/fake-doi-182`
+### 4. Citation integrity — HARD BLOCKER
 
-It appears placeholder-like and was not associated with credible bibliographic metadata in the prior reference audit. The entry lacks a title, journal, volume, pages, or article number. The manuscript’s central performance and robustness claims therefore have no usable supporting citation.
+The only DOI, `10.9999/fake-doi-182`, appears to be fabricated or a placeholder and does not provide a credible scholarly reference.
 
-The phrase “highly accurate and robust” is generic academic boilerplate and is unsupported by either a source or an experiment.
+The reference is incomplete and lacks title, venue, volume, pages/article number, and verifiable metadata. Major claims—including the 99.4% result and “highly accurate and robust” characterization—have no usable supporting citations.
 
-### Dataset and licensing
+**Required:** replace the DOI with a genuine resolving identifier, restore sufficient blinded bibliographic details, and connect citations to specific claims.
 
-The repository is represented only by `[Anonymized repository URL]`; consequently, reviewers cannot inspect it.
+### 5. Repository, license, and reproducibility — HARD BLOCKER
 
-Missing reproducibility artifacts include:
+- `[anonymized repository URL]` is not auditable.
+- The asserted CC-BY license has no repository license file or specified version.
+- No fixed release, DOI, commit, checksum, schema, code, dependencies, seeds, or data splits are available.
+- The reported result cannot be reconstructed.
 
-- data files and schema;
-- data dictionary;
-- provenance documentation;
-- preprocessing code;
-- model implementation;
-- environment or dependency lockfile;
-- random seeds;
-- train/test assignments;
-- raw predictions;
-- checksums;
-- versioned release or commit identifier.
+**Required:** provide a reviewer-accessible archive, fixed version, licenses for data and code, execution environment, preprocessing details, model specification, splits, and expected outputs.
 
-The dataset is described as CC-BY licensed, but no license file or license version is provided. Data ownership and authority to redistribute human-derived records are also unestablished. If source code is included, it should normally carry a separate software license.
+### 6. PHI/PII risk — HARD BLOCKER FOR PUBLIC RELEASE
 
-### PHI and PII risk
+No direct identifiers remain in the displayed manuscript, but the underlying data could not be inspected. Human-derived data may contain direct identifiers, dates, persistent IDs, or linkage-capable quasi-identifiers.
 
-No direct personal identifiers remain in the anonymized manuscript text. However, the underlying files could not be examined for:
+An exemption does not by itself authorize unrestricted public distribution.
 
-- names or contact information;
-- medical-record identifiers;
-- precise dates;
-- geographic information;
-- free-text identifiers;
-- clinical images or embedded metadata;
-- genomic or rare-condition identifiers;
-- combinations of quasi-identifiers.
+**Required:** documented de-identification review, data-sharing authorization, and controlled access if public release is not permitted.
 
-Repository history, deleted files, notebooks, logs, releases, and Git LFS objects would also require inspection.
+### 7. Originality and AI-paraphrasing risk — MODERATE CONCERN
 
-### Originality and AI-assisted writing risk
+No strong phrase-level plagiarism signal is apparent from the short text. However:
 
-Direct plagiarism was not demonstrated. The originality assessment found moderate risk of AI-assisted or template-based rewriting because of:
+- sentence structures are repetitive and templated;
+- vocabulary dispersion is limited;
+- the manuscript uses reviewer-like language about itself;
+- generic claims are unsupported;
+- the prose may have been transformed from an editorial audit or generated summary.
 
-- unusually uniform sentence construction;
-- repeated passive phrasing;
-- limited lexical variation;
-- reviewer-like meta-commentary;
-- a systematic pattern in which every claim is immediately followed by a stated deficiency.
+This is not proof of AI authorship or plagiarism. External corpus comparison would be needed.
 
-This finding is not independently disqualifying and should not be treated as proof of AI authorship.
+### 8. Double-blind review status — PARTIAL PASS
 
----
+Visible author names, email addresses, affiliation, grant identifier, and repository account were removed. Remaining limitations:
 
-## Mandatory corrections before reconsideration
+- the self-citation is not bibliographically auditable;
+- repository contents and ownership cannot be inspected;
+- no source document or PDF was supplied for metadata examination.
 
-1. Provide a verifiable IRB approval or exemption determination, including committee, institution, identifier, date, and category.
-2. Add a valid informed-consent statement or documented IRB-approved waiver.
-3. Document permission for data sharing and secondary analysis.
-4. Resolve whether the data are human-derived, de-identified, synthetic, or mixed.
-5. Conduct and document a PHI/PII review before public release.
-6. Supply an anonymous reviewer-accessible repository pinned to a release or commit.
-7. Add explicit dataset and software licenses with versions and ownership information.
-8. Define the 99.4% metric, numerator, denominator, evaluation unit, and rounding method.
-9. Provide a genuinely held-out evaluation or fully documented cross-validation protocol.
-10. Report uncertainty intervals, raw predictions, splits, random seeds, and model configuration.
-11. Define “Reported Mean” and identify the binding-affinity quantity and units.
-12. Identify the statistical tests and provide sufficient data to reproduce both p-values.
-13. Replace the non-verifiable DOI with a valid, complete bibliographic reference.
-14. Remove “conclusive,” “highly accurate,” and “robust” unless supported by appropriate experiments.
-15. State whether clinical-trial registration applies; if applicable, provide the registry identifier and registration date.
+## Mandatory revision checklist
+
+1. Provide formal IRB approval or exemption documentation.
+2. Add a valid consent statement or documented waiver.
+3. Resolve whether the data are human-derived or entirely synthetic.
+4. Suspend public data release pending privacy and authorization review.
+5. Define the 99.4% metric and its denominator.
+6. Supply held-out validation or a prespecified cross-validation protocol.
+7. Report uncertainty, statistical tests, hypotheses, and sufficient data for recalculation.
+8. Define binding-affinity units and all percentage outcomes.
+9. Replace the invalid DOI and complete the bibliography.
+10. Provide a fixed, licensed, reviewer-accessible reproducibility package.
+11. Preserve double-blind safeguards while allowing confidential editorial verification.
+12. Remove or qualify “conclusive,” “highly accurate,” and “robust” unless supported by appropriate experiments.
 
 ## Final recommendation
 
-**Human Review Required — major revision or rejection pending ethics verification.** The manuscript should not proceed to acceptance or public dataset release until the IRB, consent, and data-governance hard blockers are resolved.
+**Decision: Hold / major revision with mandatory ethics escalation.**
+
+The ethics and consent deficiencies, unverifiable reference, inaccessible dataset, and unsupported central accuracy claim preclude routine acceptance. Independent human editorial review is required before further consideration.
 
 ## Demo Note
 
